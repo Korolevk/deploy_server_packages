@@ -16,13 +16,14 @@ DEBUG = True
 #     }
 # }
 
+# mysql://bf329ce360970a:ebb86e20@eu-cdbr-west-01.cleardb.com/heroku_bfee0306a62d481?reconnect=true
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'vipmaker_test3',
-        'USER': 'root',
-        'PASSWORD': 'qazzaq123',
+        'NAME': 'heroku_bfee0306a62d481',
+        'USER': 'bf329ce360970a',
+        'PASSWORD': 'ebb86e20',
         # 'HOST': '127.0.0.1',
         # 'PORT': '3306',
     }
