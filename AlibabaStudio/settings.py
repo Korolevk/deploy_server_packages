@@ -13,7 +13,7 @@ SECRET_KEY = '...'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 
 INSTALLED_APPS = (
@@ -76,11 +76,6 @@ DATABASES = {
         # 'PORT': '3306',
     }
 }
-
-# Update database configuration with $DATABASE_URL.
-import dj_database_url
-db_from_env = dj_database_url.config()
-DATABASES['default'].update(db_from_env)
 
 
 # Internationalization
