@@ -24,7 +24,7 @@ DATABASES = {
         'NAME': 'vipmaker_test3',
         'USER': 'root',
         'PASSWORD': 'qazzaq123',
-        'HOST': '127.0.0.1',
+        'HOST': 'localhost',
         'PORT': '3306',
     }
 }
