@@ -17,15 +17,16 @@ TEMPLATE_DEBUG = True
 #     }
 # }
 
+# eu-cdbr-west-01
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'vipmaker_db',
-        'USER': 'dbuser',
-        'PASSWORD': 'qwerty123',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'NAME': 'heroku_bfee0306a62d481',
+        'USER': 'bf329ce360970a',
+        'PASSWORD': 'ebb86e20',
+        'HOST': 'eu-cdbr-west-01.cleardb.com',
+        # 'PORT': '3306',
     }
 }
 
