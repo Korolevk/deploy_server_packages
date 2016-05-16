@@ -32,6 +32,7 @@
                                 <tr>
                                     <td>
                                         <h1 style="color: #fff;padding:0px 10px 0px 15px;">{{ user.first_name|truncatechars:25 }}</h1>
+                                        <p style="color:red;">{{ media_root }}</p>
                                     </td>
                                     {% if user.username in vip_persons %}
                                         <td>
