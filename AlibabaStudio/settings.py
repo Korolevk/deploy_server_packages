@@ -122,6 +122,7 @@ EMAIL_FILE_PATH = 'tmp/messages/'
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
 
 # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
@@ -130,7 +131,7 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'uploads')
 MEDIA_URL = '/uploads/'
-MEDIA_ROOT_DIR = 'uploads'
+os.path.join(PROJECT_ROOT, '/uploads'),
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
