@@ -137,8 +137,10 @@ MEDIA_URL = '/uploads/'
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'alibaba/static'),
-    os.path.join(MEDIA_DIR, '/uploads'),
 )
+
+MEDIA_ROOT_DIR = os.path.join(MEDIA_DIR, '/uploads')
+
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
