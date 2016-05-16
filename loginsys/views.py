@@ -9,7 +9,7 @@ from django.contrib import auth
 from django.contrib.auth.models import User
 from alibaba.other_functions_by_kirill import end_of_name
 from django.core.mail import send_mail
-from AlibabaStudio.settings import EMAIL_HOST_USER, BASE_DIR, PROJECT_ROOT
+from AlibabaStudio.settings import EMAIL_HOST_USER, BASE_DIR, PROJECT_ROOT, BASE_DIR2
 
 
 def signup(request):
@@ -136,6 +136,7 @@ def user(request, login):
             args['me_follow'] = Follow.objects.filter(follow_username=args['user'].username)
             args['me_follow_count'] = args['me_follow'].count()
             args['base_dir'] = BASE_DIR
+            args['base_dir2'] = BASE_DIR2
             args['project_root'] = PROJECT_ROOT
         else:
             if auth.get_user(request).username:

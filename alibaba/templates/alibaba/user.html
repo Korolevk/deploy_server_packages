@@ -33,6 +33,7 @@
                                     <td>
                                         <h1 style="color: #fff;padding:0px 10px 0px 15px;">{{ user.first_name|truncatechars:25 }}</h1>
                                         <p style="color:red;">{{ base_dir }}</p>
+                                        <p style="color:yellow;">{{ base_dir2 }}</p>
                                         <p style="color:green;">{{ project_root }}</p>
                                     </td>
                                     {% if user.username in vip_persons %}
