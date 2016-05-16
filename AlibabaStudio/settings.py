@@ -121,14 +121,14 @@ EMAIL_FILE_PATH = 'tmp/messages/'
 # MEDIA_URL = '/uploads/'
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
 
-BASE_DIR2 = os.path.dirname(os.path.abspath(__file__)) #/app/AlibabaStudio
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
 
 
-MEDIA_ROOT = os.path.join(BASE_DIR2, 'uploads')
+MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'uploads')
 MEDIA_URL = '/uploads/'
 
 # Extra places for collectstatic to find static files.
