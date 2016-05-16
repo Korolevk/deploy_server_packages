@@ -5,8 +5,8 @@
 db.sqlite3
 
 # files ignore
-uploads/files_on_wall/*
-uploads/profile_photoes/*
+alibaba/static/alibaba/uploads/files_on_wall/*
+alibaba/static/alibaba/uploads/profile_photoes/*
 !addPhoto.png
 !fon.jpg
 
