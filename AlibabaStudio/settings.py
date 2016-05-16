@@ -139,7 +139,7 @@ STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'alibaba/static'),
 )
 
-MEDIA_ROOT_DIR = os.path.join(PROJECT_ROOT, '/uploads')
+MEDIA_ROOT_DIR = os.path.join(PROJECT_ROOT, 'alibaba/static/uploads')
 
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
