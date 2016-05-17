@@ -134,14 +134,6 @@ AWS_ACCESS_KEY_ID = os.environ.get('AKIAIBXDX7DILJVUZ6ZQ')
 AWS_SECRET_ACCESS_KEY = os.environ.get('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')
 AWS_STORAGE_BUCKET_NAME = 'filesvipmaker'
 
-
-STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-
-# STATIC_URL = 'http://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/'
-ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
-
-
 # MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'uploads')
 # MEDIA_URL = '/uploads/'
 
@@ -150,7 +142,7 @@ STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'alibaba/static'),
 )
 #
-# STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 try:
     from AlibabaStudio.local_settings import *
