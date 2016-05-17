@@ -126,10 +126,19 @@ PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
-
-
-MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'uploads')
 MEDIA_URL = '/uploads/'
+
+# Amazon web services
+AWS_ACCESS_KEY_ID = os.environ.get('AKIAIBXDX7DILJVUZ6ZQ')
+AWS_SECRET_ACCESS_KEY = os.environ.get('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')
+AWS_STORAGE_BUCKET_NAME = 'filesvipmaker'
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+
+ADMIN_MEDIA_PREFIX = MEDIA_URL + 'admin/'
+
+# MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'uploads')
+# MEDIA_URL = '/uploads/'
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
