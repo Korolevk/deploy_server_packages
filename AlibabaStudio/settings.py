@@ -124,28 +124,33 @@ EMAIL_FILE_PATH = 'tmp/messages/'
 # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
-STATIC_URL = '/static/'
-MEDIA_URL = '/uploads/'
+# STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+# STATIC_URL = '/static/'
+# MEDIA_URL = '/uploads/'
 
 # Amazon web services
+
 AWS_ACCESS_KEY_ID = os.environ.get('AKIAIBXDX7DILJVUZ6ZQ')
 AWS_SECRET_ACCESS_KEY = os.environ.get('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')
 AWS_STORAGE_BUCKET_NAME = 'filesvipmaker'
 
+
+STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 
-ADMIN_MEDIA_PREFIX = MEDIA_URL + 'admin/'
+STATIC_URL = 'http://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/'
+ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
+
 
 # MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'uploads')
 # MEDIA_URL = '/uploads/'
 
 # Extra places for collectstatic to find static files.
-STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT, 'alibaba/static'),
-)
-
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+# STATICFILES_DIRS = (
+#     os.path.join(PROJECT_ROOT, 'alibaba/static'),
+# )
+#
+# STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 try:
     from AlibabaStudio.local_settings import *
