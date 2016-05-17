@@ -50,7 +50,7 @@ class Photo(models.Model):
         ordering = ['-username_photo',]
     profile = models.ForeignKey(User)
     username_photo = models.CharField(max_length=100, default='')
-    profile_photo = models.ImageField(upload_to='profile_photoes/', default='/static/alibaba/images/addPhoto.png')
+    profile_photo = models.ImageField(upload_to='alibaba/static/profile_photoes', default='/static/alibaba/images/addPhoto.png')
     first_name_photo = models.CharField(max_length=100,default='')
 
     def __str__(self):
