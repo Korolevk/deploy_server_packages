@@ -146,9 +146,9 @@ ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
 # MEDIA_URL = '/uploads/'
 
 # Extra places for collectstatic to find static files.
-# STATICFILES_DIRS = (
-#     os.path.join(PROJECT_ROOT, 'alibaba/static'),
-# )
+STATICFILES_DIRS = (
+    os.path.join(PROJECT_ROOT, 'alibaba/static'),
+)
 #
 # STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
