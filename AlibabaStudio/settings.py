@@ -126,13 +126,15 @@ PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
-# MEDIA_URL = '/uploads/'
 
-# Amazon web services
+AWS_QUERYSTRING_AUTH = False
+AWS_ACCESS_KEY_ID = os.environ['AKIAJVCXOBHNZNLRBKGA']
+AWS_SECRET_ACCESS_KEY = os.environ['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']
+AWS_STORAGE_BUCKET_NAME = os.environ['vipmakerfiles']
+MEDIA_URL = 'http://%s.s3.amazonaws.com/vipmakerfiles/' % AWS_STORAGE_BUCKET_NAME
+DEFAULT_FILE_STORAGE = "storages.backends.s3boto.S3BotoStorage"
 
-AWS_ACCESS_KEY_ID = os.environ.get('AKIAIBXDX7DILJVUZ6ZQ')
-AWS_SECRET_ACCESS_KEY = os.environ.get('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')
-AWS_STORAGE_BUCKET_NAME = 'filesvipmaker'
+
 
 # MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'uploads')
 # MEDIA_URL = '/uploads/'
@@ -141,7 +143,7 @@ AWS_STORAGE_BUCKET_NAME = 'filesvipmaker'
 STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'alibaba/static'),
 )
-#
+
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 try:
